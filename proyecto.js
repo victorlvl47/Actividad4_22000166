@@ -38,6 +38,8 @@ var edad_conyuge_numero = 0
 if("SI" == casado.toUpperCase()){
   edad_conyuge_numero = parseInt(edad_conyuge)
 }
+// mostrar la edad del conyuge en consola
+console.log({edad_conyuge_numero})
 
 var hijos = prompt("¿Tiene hijos o hijas?")
 //Comprobamos la cantidad de hijos solamente si los tienen
@@ -51,9 +53,29 @@ if ("SI" == hijos.toUpperCase()) {
   cantidad_hijos_numero = parseInt(cantidad_hijos)
 }
 // mostrar la cantidad de hijos que se ingreso en consola
-// console.log({cantidad_hijos_numero})
+ console.log({cantidad_hijos_numero})
 
 //Aquí debe calcular el recargo total basado en las respuestas ingresadas
+// Calcular recargo basado en la edad del conyuge
+// -------------------------------------------------------
+
+// Si tienen de 18 a 24 años, se les hará un recargo del 10% del precio base
+if (18 <= edad_conyuge_numero && edad_conyuge_numero < 25 ) {
+  recargo = precio_base * casado_18
+}
+// Si tienen de 25 a 49 años, se les hará un recargo del 20% del precio base
+else if (25 <= edad_conyuge_numero && edad_conyuge_numero < 50) {
+  recargo = precio_base * casado_25
+}
+// Si tienen 50 años o más, se les hará un recargo del 30% del precio base
+else if (50 <= edad_conyuge_numero) {
+  recargo = precio_base * casado_50
+}
+
+// mostrar el recargo basado en la edad del conyuge en consola
+console.log("recargo basado en la edad del conyuge:", recargo);
+// -------------------------------------------------------
+
 
 //Aquí es donde debe de calcular los recargos y el valor final
 //Ejemplo (Debe completar los condicionales): Recargo por edad del asegurado
