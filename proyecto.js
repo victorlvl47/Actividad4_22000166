@@ -78,7 +78,28 @@ console.log("recargo basado en la edad del conyuge:", recargo);
 
 // sumar el recargo basado en la edad del conyuge al
 // recargo total
-recargo_total = recargo
+recargo_total += recargo
+
+// mostrar el recargo total hasta ahora en consola
+console.log({recargo_total})
+// -------------------------------------------------------
+
+
+// Calcular recargo basado en la cantidad de hijo/hijas
+// -------------------------------------------------------
+
+// calcular recargo por hijo
+var recargo_por_hijo = hijos_recargo * precio_base
+
+// recargo basado en la cantidad de hijo/hijas
+recargo = recargo_por_hijo * cantidad_hijos_numero
+
+// mostrar el recargo basado en la cantidad de hijos/hijas en consola
+console.log("recago basado en la cantidad de hijos/hijas:", recargo)
+
+// sumar el recargo basado en la cantidad de hijos/hijas
+// al recargo total
+recargo_total += recargo
 
 // mostrar el recargo total hasta ahora en consola
 console.log({recargo_total})
