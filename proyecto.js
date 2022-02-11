@@ -56,6 +56,7 @@ if ("SI" == hijos.toUpperCase()) {
  console.log({cantidad_hijos_numero})
 
 //Aquí debe calcular el recargo total basado en las respuestas ingresadas
+
 // Calcular recargo basado en la edad del conyuge
 // -------------------------------------------------------
 
@@ -74,6 +75,13 @@ else if (50 <= edad_conyuge_numero) {
 
 // mostrar el recargo basado en la edad del conyuge en consola
 console.log("recargo basado en la edad del conyuge:", recargo);
+
+// sumar el recargo basado en la edad del conyuge al
+// recargo total
+recargo_total = recargo
+
+// mostrar el recargo total hasta ahora en consola
+console.log({recargo_total})
 // -------------------------------------------------------
 
 
