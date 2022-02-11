@@ -107,13 +107,39 @@ console.log({recargo_total})
 
 
 //Aquí es donde debe de calcular los recargos y el valor final
+
 //Ejemplo (Debe completar los condicionales): Recargo por edad del asegurado
-if(edad_numero>=18 && edad_numero<25){
-  //Calculamos el recargo en base a la edad
+
+// Calculamos el recargo en base a la edad del asegurado
+// -------------------------------------------------------
+
+// si el asegurado tiene de 18 a 24 años, se le hará un
+// recargo del 10% del precio base
+if (18 <= edad_numero && edad_numero < 25) {
   recargo = precio_base * edad_18
-  //Sumamos todos los recargos que hemos obtenido
-  recargo_total = recargo_total + recargo
 }
+// si el asegurado tiene de 25 a 49 años, se le hará un
+// recargo del 20% del precio base
+else if (25 <= edad_numero && edad_numero < 50) {
+  recargo = precio_base * edad_25
+}
+// si el asegurado tiene 50 años o mas, se le hará un
+// recargo del 30% del precio base
+else if (50 <= edad_numero) {
+  recargo = precio_base * edad_50
+}
+
+// mostrar el recargo basado en la edad del asegurado en consola
+console.log("recargo basado en la edad del asegurado:", recargo);
+
+// sumar el recargo basado en la edad del asegurado al
+// recargo total
+recargo_total += recargo
+
+// mostrar el recargo total hasta ahora en consola
+console.log({recargo_total})
+// -------------------------------------------------------
+
 //aqui puede colocar un else if() con el siguiente rango
 
 /**
