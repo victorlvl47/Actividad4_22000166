@@ -21,8 +21,11 @@ var recargo_total = 0
 //Precio final
 var precio_final = 0
 
-//Mensajes de alerta para ingresar datos
+// Mensajes de alerta para ingresar datos
+// *******************************************************
+
 var nombre = prompt("Ingrese su nombre, por favor")
+
 var edad = prompt("¿Cuantos años tiene? Ingrese solamente números ")
 
 var casado = prompt("¿Está casado actualmente?")
@@ -53,9 +56,15 @@ if ("SI" == hijos.toUpperCase()) {
   cantidad_hijos_numero = parseInt(cantidad_hijos)
 }
 // mostrar la cantidad de hijos que se ingreso en consola
- console.log({cantidad_hijos_numero})
+console.log({cantidad_hijos_numero})
+
+// *******************************************************
+
+
+
 
 //Aquí debe calcular el recargo total basado en las respuestas ingresadas
+// *******************************************************
 
 // Calcular recargo basado en la edad del conyuge
 // -------------------------------------------------------
@@ -105,11 +114,6 @@ recargo_total += recargo
 console.log({recargo_total})
 // -------------------------------------------------------
 
-
-//Aquí es donde debe de calcular los recargos y el valor final
-
-//Ejemplo (Debe completar los condicionales): Recargo por edad del asegurado
-
 // Calculamos el recargo en base a la edad del asegurado
 // -------------------------------------------------------
 
@@ -140,19 +144,12 @@ recargo_total += recargo
 console.log({recargo_total})
 // -------------------------------------------------------
 
-//aqui puede colocar un else if() con el siguiente rango
+// *******************************************************
 
-/**
- * 2. Recargo por la edad del conyuge
- */
-
-/**
- * 3. Recargo por la cantidad de hijos
- */
-
-
+// precio_final = precio base + el total de todos los recargos que apliquen
 precio_final = precio_base + recargo_total
-//Resultado
+
+// Resultado en pantalla
 alert ("Para el asegurado "+nombre)
 alert ("El recargo total sera de: "+recargo_total)
 alert ("El precio sera de: "+precio_final)
