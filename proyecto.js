@@ -28,11 +28,11 @@ var nombre = prompt("Ingrese su nombre, por favor")
 
 var edad = prompt("¿Cuantos años tiene? Ingrese solamente números ")
 
-var casado = prompt("¿Está casado actualmente?")
+var casado = prompt("¿Está casado actualmente? (si/no)")
 //Comprobamos la edad del cónyuge, solamente si se está casado/a
 var edad_conyuge
 if("SI" == casado.toUpperCase()){
-  edad_conyuge = prompt("¿Que edad tiene su esposo/a?", "si/no")
+  edad_conyuge = prompt("¿Que edad tiene su esposo/a? (si/no)")
 }
 //convirtiendo las edades ingresadas a números
 var edad_numero = parseInt(edad)
@@ -44,12 +44,12 @@ if("SI" == casado.toUpperCase()){
 // mostrar la edad del conyuge en consola
 console.log({edad_conyuge_numero})
 
-var hijos = prompt("¿Tiene hijos o hijas?")
+var hijos = prompt("¿Tiene hijos o hijas? (si/no)")
 //Comprobamos la cantidad de hijos solamente si los tienen
 var cantidad_hijos
 var cantidad_hijos_numero = 0
 if ("SI" == hijos.toUpperCase()) {
-  cantidad_hijos = prompt("¿Cuantos hijos/hijas tiene?")
+  cantidad_hijos = prompt("¿Cuantos hijos/hijas tiene? Ingrese solamente números")
   /**
    * 1. convierta la cantidad de hijos a numero
    */
