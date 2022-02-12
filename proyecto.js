@@ -27,6 +27,14 @@ var precio_final = 0
 var nombre = prompt("Ingrese su nombre, por favor")
 
 var edad = prompt("¿Cuantos años tiene? Ingrese solamente números ")
+//convirtiendo las edades ingresadas a números
+var edad_numero = parseInt(edad)
+// La persona a asegurar tiene que ser mayor de edad, por lo cual no se
+// consideran los casos en los cuales esto no sea verdad.
+if (edad_numero < 18) {
+alert("La persona a asegurar tiene que ser mayor de edad.")
+throw "La persona a asegurar tiene que ser mayor de edad."
+}
 
 var casado = prompt("¿Está casado actualmente? (si/no)")
 //Comprobamos la edad del cónyuge, solamente si se está casado/a
@@ -34,12 +42,16 @@ var edad_conyuge
 if("SI" == casado.toUpperCase()){
   edad_conyuge = prompt("¿Que edad tiene su esposo/a? (si/no)")
 }
-//convirtiendo las edades ingresadas a números
-var edad_numero = parseInt(edad)
 var edad_conyuge_numero = 0
 //convirtiendo la edad del cónyuge si se esta casado/a
 if("SI" == casado.toUpperCase()){
   edad_conyuge_numero = parseInt(edad_conyuge)
+}
+// El conyuge tiene que ser mayor de edad, por lo cual no se
+// consideran los casos en los cuales esto no sea verdad.
+if (edad_conyuge_numero < 18) {
+alert("El conyuge tiene que ser mayor de edad.")
+throw "El conyuge tiene que ser mayor de edad."
 }
 // mostrar la edad del conyuge en consola
 console.log({edad_conyuge_numero})
