@@ -8,3 +8,6 @@ y numero de hijos.
 #### Posibles Mejoras
 Una interfaz grafica, para que sea mas intuitivo para el usuario del programa
 ingresar la informacion del asegurado.
+
+#### Diagrama de flujo
+![diagrams cotizaciones](./cotizaciones_diagrama_de_flujo.png)
