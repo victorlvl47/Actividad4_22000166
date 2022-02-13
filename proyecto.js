@@ -46,13 +46,15 @@ var edad_conyuge_numero = 0
 //convirtiendo la edad del cónyuge si se esta casado/a
 if("SI" == casado.toUpperCase()){
   edad_conyuge_numero = parseInt(edad_conyuge)
+
+  // El conyuge tiene que ser mayor de edad, por lo cual no se
+  // consideran los casos en los cuales esto no sea verdad.
+  if (edad_conyuge_numero < 18) {
+  alert("El conyuge tiene que ser mayor de edad.")
+  throw "El conyuge tiene que ser mayor de edad."
+  }
 }
-// El conyuge tiene que ser mayor de edad, por lo cual no se
-// consideran los casos en los cuales esto no sea verdad.
-if (edad_conyuge_numero < 18) {
-alert("El conyuge tiene que ser mayor de edad.")
-throw "El conyuge tiene que ser mayor de edad."
-}
+
 // mostrar la edad del conyuge en consola
 console.log({edad_conyuge_numero})
 
