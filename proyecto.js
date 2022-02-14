@@ -1,3 +1,10 @@
+/*
+* --- IMPORTANTE ---
+* Este programa se escribio utilizando la consola de firefox (f12, consola).
+* Para asegurar su correcta funcion, utilizar el mismo ambiente.
+* Victor Maldonado, ultima actualizacion: 14/02/2022
+*/
+
 //Variables utiles
 //Precio base de la cotización, en quetzales, lo puede cambiar
 var precio_base = 2000
