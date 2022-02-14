@@ -13,6 +13,9 @@ var casado_50 = 0.3 // 30%
 
 var hijos_recargo = 0.2 // 20%
 
+// recargo del 35% por cada propiedad
+var propiedad_recargo = 0.35
+
 
 while (true) {
 
@@ -77,6 +80,15 @@ while (true) {
   // mostrar la cantidad de hijos que se ingreso en consola
   console.log({cantidad_hijos_numero})
 
+  // Preguntar cuantas propiedades estan a nombre del
+  // asegurado
+  var cantidad_propiedades = parseInt(prompt("¿Cuantas propiedades estan a su nombre? Ingrese solamente numeros. Si no posee propiedades ingrese 0."))
+  if (cantidad_propiedades < 0) {
+    cantidad_propiedades = 0
+  }
+
+  // mostrar la cantidad de propiedades en consola
+  console.log({cantidad_propiedades})
   // *******************************************************
 
 
@@ -156,6 +168,21 @@ while (true) {
   console.log("recargo basado en la edad del asegurado:", recargo);
 
   // sumar el recargo basado en la edad del asegurado al
+  // recargo total
+  recargo_total += recargo
+
+  // mostrar el recargo total hasta ahora en consola
+  console.log({recargo_total})
+  // -------------------------------------------------------
+
+  // Calcular el recargo en base al numero de propiedades
+  // -------------------------------------------------------
+
+  var recargo_por_propiedad = precio_base * propiedad_recargo
+  recargo = recargo_por_propiedad * cantidad_propiedades
+  console.log("recargo total basado en el numero de propiedades:", recargo)
+
+  // sumar el recargo basado en el numero de propiedades al
   // recargo total
   recargo_total += recargo
 
