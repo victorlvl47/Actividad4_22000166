@@ -16,6 +16,9 @@ var hijos_recargo = 0.2 // 20%
 // recargo del 35% por cada propiedad
 var propiedad_recargo = 0.35
 
+// recargo del 5% sobre el salario
+var salario_recargo = 0.05
+
 
 while (true) {
 
@@ -89,6 +92,16 @@ while (true) {
 
   // mostrar la cantidad de propiedades en consola
   console.log({cantidad_propiedades})
+
+
+  // Preguntar cual es el salario del asegurado
+  var salario = parseInt(prompt("¿Cual es la cantidad de su salario actual? Ingrese solo numeros. Si no cuenta con salario ingrese 0."))
+  if (salario < 0) {
+    salario = 0
+  }
+
+  // mostrar el salario del asegurado en consola
+  console.log({salario})
   // *******************************************************
 
 
@@ -184,6 +197,19 @@ while (true) {
 
   // sumar el recargo basado en el numero de propiedades al
   // recargo total
+  recargo_total += recargo
+
+  // mostrar el recargo total hasta ahora en consola
+  console.log({recargo_total})
+  // -------------------------------------------------------
+
+
+  // Calcular el recargo del 5% sobre el salario del asegurado
+  // -------------------------------------------------------
+  recargo = salario * salario_recargo
+  console.log("recargo del 5% sobre el salario del asegurado:", recargo)
+
+  // sumar el recargo del salario al recargo total.
   recargo_total += recargo
 
   // mostrar el recargo total hasta ahora en consola
